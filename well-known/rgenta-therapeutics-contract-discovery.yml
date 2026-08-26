@@ -1,0 +1,42 @@
+generated: '2026-08-26'
+method: probed
+source: live probes of every public Rgenta Therapeutics host (STEP 0b contract discovery)
+summary: >-
+  No machine-readable API contract of any kind is published by Rgenta Therapeutics.
+  The company operates a single public host — the Wix-served corporate site
+  www.rgentatx.com — and has no api.* host, no developer subdomain, no docs host and
+  no public GitHub organization. Every REST OpenAPI probe, the GraphQL probe and both
+  A2A agent-card paths returned the site's standard HTML 404. The one machine-readable
+  document the company does serve is an llms.txt, which is a Wix-generated site map
+  for language models and lists only marketing pages — it names no API.
+hosts_probed:
+  - https://www.rgentatx.com
+probes:
+  - path: /openapi.json
+    status: 404
+  - path: /openapi.yaml
+    status: 404
+  - path: /swagger.json
+    status: 404
+  - path: /v1/openapi.json
+    status: 404
+  - path: /api-docs
+    status: 404
+  - path: /docs
+    status: 404
+  - path: /redoc
+    status: 404
+  - path: /api
+    status: 404
+  - path: /graphql
+    status: 404
+    note: no GraphQL surface; introspection not attempted because the path does not exist
+  - path: /llms.txt
+    status: 200
+    note: real document, saved verbatim to llms/rgenta-therapeutics-llms.txt
+  - path: /robots.txt
+    status: 200
+  - path: /sitemap.xml
+    status: 200
+    note: 14 URLs, all marketing pages; four are unconfigured Wix blog placeholders
+result: no-published-contract

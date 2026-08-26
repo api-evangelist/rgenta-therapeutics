@@ -1,7 +1,18 @@
 aid: rgenta-therapeutics
 name: Rgenta Therapeutics
-description: 'Rgenta Therapeutics is a company surfaced via the API Evangelist harvest backlog (source:
-  secondary-market) and added to the network as a stub for full-pipeline profiling.'
+description: >-
+  Rgenta Therapeutics is a clinical-stage biotechnology company headquartered at 300 TradeCenter,
+  Woburn, Massachusetts, developing a pipeline of oral, small-molecule RNA-targeting medicines with
+  an initial focus on oncology and neurological disorders. Its discovery platform mines large-scale
+  genomics data to identify targetable RNA processing events, then designs small molecules that
+  modulate the interactions among the spliceosome, RNA-binding regulatory proteins and RNA itself in
+  order to shut down production of disease-driving proteins previously considered undruggable. Its
+  lead clinical asset, RGT-61159, is an orally available modulator of MYB splicing in development for
+  adenoid cystic carcinoma and colorectal cancer, and its RSwitch technology applies the same
+  chemistry to tune transgene expression in AAV-delivered gene and cell therapies. Rgenta is a
+  therapeutics developer, not a software vendor: it publishes no API, no developer portal and no
+  machine-readable API contract of any kind.
+image: https://kinlane-productions2.s3.amazonaws.com/apis-json/apis-json-logo.jpg
 url: https://raw.githubusercontent.com/api-evangelist/rgenta-therapeutics/refs/heads/main/apis.yml
 x-type: company
 x-source: harvest:secondary-market
@@ -12,6 +23,13 @@ created: '2026-08-26'
 modified: '2026-08-26'
 tags:
 - Company
+- Biotechnology
+- Pharmaceuticals
+- Life Sciences
+- Drug Discovery
+- Oncology
+- RNA Therapeutics
+- Healthcare
 apis: []
 maintainers:
 - FN: Kin Lane
@@ -19,5 +37,43 @@ maintainers:
 - FN: APIs.json
   email: info@apis.io
 common:
+- type: DomainSecurity
+  url: security/rgenta-therapeutics-domain-security.yml
 - type: Website
-  url: https://www.nasdaqprivatemarket.com/
+  url: https://www.rgentatx.com/
+- type: About
+  url: https://www.rgentatx.com/about-us
+- type: Blog
+  url: https://www.rgentatx.com/news
+- type: PrivacyPolicy
+  url: https://www.rgentatx.com/privacy-policy
+- type: Contact
+  url: https://www.rgentatx.com/contact
+- type: Careers
+  url: https://www.rgentatx.com/careers
+- type: LinkedIn
+  url: https://www.linkedin.com/company/rgenta-therapeutics-inc/
+- type: LLMsTxt
+  url: llms/rgenta-therapeutics-llms.txt
+x-enrichment:
+  date: '2026-08-26'
+  status: minimal
+  artifacts_added: 4
+  pass: local-v1
+x-coverage:
+  state: none
+  reason: not-a-software-company
+  detail: >-
+    Rgenta Therapeutics is a clinical-stage drug developer whose product is a molecule, not
+    software; its single public host is a Wix marketing site whose own llms.txt enumerates all
+    eleven pages it serves and none of them is a developer, API or data page.
+  evidence:
+    - url: https://www.rgentatx.com/llms.txt
+      status: 200
+    - url: https://www.rgentatx.com/openapi.json
+      status: 404
+    - url: https://www.rgentatx.com/.well-known/agent-card.json
+      status: 404
+    - url: https://www.rgentatx.com/graphql
+      status: 404
+  checked: '2026-08-26'

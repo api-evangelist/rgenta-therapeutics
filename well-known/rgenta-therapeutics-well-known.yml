@@ -1,0 +1,29 @@
+generated: '2026-08-26'
+method: probed
+source: live probe of /.well-known/* on the Rgenta Therapeutics corporate web host
+notes: >-
+  Rgenta Therapeutics is a clinical-stage biotechnology company and publishes no API,
+  no developer portal and no API host. The only host it operates publicly is the
+  corporate marketing site www.rgentatx.com, which is served by Wix. Every
+  /.well-known/ path probed returned 404 with the site's standard HTML 404 body
+  (66,703 bytes, text/html), so no document was saved and no WellKnown or SecurityTxt
+  pointer is emitted. The recorded absence is the finding.
+hosts:
+  - host: https://www.rgentatx.com
+    documents:
+      - path: /.well-known/security.txt
+        status: 404
+      - path: /.well-known/openid-configuration
+        status: 404
+      - path: /.well-known/oauth-authorization-server
+        status: 404
+      - path: /.well-known/api-catalog
+        status: 404
+      - path: /.well-known/ai-plugin.json
+        status: 404
+      - path: /.well-known/agent-card.json
+        status: 404
+        note: HTML 404 body, not an A2A agent card
+      - path: /.well-known/agent.json
+        status: 404
+        note: legacy pre-0.3 A2A path, also 404
