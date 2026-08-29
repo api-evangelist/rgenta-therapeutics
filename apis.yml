@@ -12,6 +12,17 @@ description: >-
   chemistry to tune transgene expression in AAV-delivered gene and cell therapies. Rgenta is a
   therapeutics developer, not a software vendor: it publishes no API, no developer portal and no
   machine-readable API contract of any kind.
+deliveryModel:
+  model: unknown
+  open_source: false
+  commercial: false
+  callable_host: false
+  label: Delivery model not determined — needs a product licence on record
+  confidence: low
+  source:
+  - none
+  generated: '2026-08-28'
+  method: derived
 image: https://kinlane-productions2.s3.amazonaws.com/apis-json/apis-json-logo.jpg
 url: https://raw.githubusercontent.com/api-evangelist/rgenta-therapeutics/refs/heads/main/apis.yml
 x-type: company
